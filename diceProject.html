@@ -49,21 +49,37 @@
     <div class="container">
 
       <!-- Portfolio Item Heading -->
-      <h1 class="my-4">Welcome
-        <small>- Marek Sautter</small>
+      <h1 class="my-4">Dice Roll
+        <small>Week 1 (05/17-05/23)</small>
       </h1>
 
       <!-- Portfolio Item Row -->
       <div class="row">
         <div class="col-md-8" style="background: #2E2E2E; height: 500px;">
+          <div id="selector"></div>
+          <div id="diceList">
+            <img class="diceImg" id="diceImg1" src="content\diceIMG\dice1.png">
+            <img class="diceImg" id="diceImg2" src="content\diceIMG\dice2.png">
+            <img class="diceImg" id="diceImg3" src="content\diceIMG\dice3.png">
+            <img class="diceImg" id="diceImg4" src="content\diceIMG\dice4.png">
+            <img class="diceImg" id="diceImg5" src="content\diceIMG\dice5.png">
+            <img class="diceImg" id="diceImg6" src="content\diceIMG\dice6.png">
+          </div>
+          <h3 id="loopTag">Loop</h3>
+          <button class="startBtn" id="normBtn" onclick="myMove()">Start</button>
+          <input class="startBtn" id="loopCheck" type="checkbox">
+          <button class="startBtn" id="randposBtn" onclick="myRandMove()">Random<br>Start</button>
         </div>
 
         <div class="col-md-4">
-          <h3 class="my-3">Introduction</h3>
-          <p> Hi, my name is Marek Sautter, and I am a third year Computer Science student at California State University Fullerton. 
-            I enjoy programming so I created this website to display my projects and hopefully earn an internship before I graduate. </p><p>
-            I have included a simplified resume at the top and if you would like my full one with my contact info you can fill out the form under Contact.
-            </p> <p>Feel free to look around at my projects and view the source code on my <a href='https://github.com/msautter'>github</a>.
+          <h3 class="my-3">Project Description</h3>
+          <p>For the first week of my summer programming challenge, I wanted to create a simple dice roller.
+            I could have just picked a random num from 1-6, but I wanted to practice my animations in Javascript.
+          </p>
+          <p>
+            Each time the user presses start, a random length is chosen and decremented when the selector moves.
+            I later added the ability to loop the selector because it spent too much time on the ends. I then added a 
+            random start button that also randomized where the selector starts.
           </p>
         </div>
 
@@ -71,7 +87,7 @@
       <!-- /.row -->
 
       <!-- Related Projects Row -->
-      <h3 class="my-4">Projects</h3>
+      <h3 class="my-4">Other Projects</h3>
 
       <div class="row">
 
