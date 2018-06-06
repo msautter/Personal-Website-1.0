@@ -30,6 +30,7 @@ function frame() {
     if (rand <= 0) {
         clearInterval(id);
         document.getElementById("normBtn").disabled = false;
+        document.getElementById("randposBtn").disabled = false;
         checkDice();
         updateList();
     }
@@ -47,6 +48,8 @@ function frame() {
 }
 
 function myMove() {
+    document.getElementById("normBtn").disabled = true;
+    document.getElementById("randposBtn").disabled = true;
     var dir = true;
     rand = Math.floor(Math.random()* 1155) + 1;
     randCopy = rand;
