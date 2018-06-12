@@ -20,22 +20,13 @@ function copyArray(myArray) {
 
 function postToTable(myArray) {
     var rowIndex = 0;
-    for (var i = 0; i < myArray.length; i+=1) {
-        if (!isNumeric(myArray[i]) && isNumeric(myArray[i+1])) {
-            var table = document.getElementById("friendTable");
-            var row = table.insertRow(rowIndex);
-            var cell1 = row.insertCell(-1);
-            var cell2 = row.insertCell(0);
-            var cell3 = row.insertCell(1);
-            cell1.innerHTML = String(myArray[i]);
-            cell2.innerHTML = String(myArray[i+1]);
-            cell3.innerHTML = String(myArray[i+2]);
-            rowIndex++;
-        }
+    var hasNumber = /\d/;
+    console.log("Hello there");
+    for (var i = 0; i < myArray.length; i++) {
+        //if (hasNumber.test(myArray[i])) console.log("I am positive" + myArray[i]);
+        //else (console.log("I am negative" + myArray[i+1]));
+        console.log(myArray[i])
     }
 }
 
 
-function isNumeric(myString) {
-    return !isNaN(parseFloat(myString)) && isFinite(myString);
-  }
