@@ -1,7 +1,7 @@
 #rawData {
     position: absolute;
     background: white;
-    height: 430px;
+    height: 395px;
     width: 350px;
     left: 20px;
     top: 20px;
@@ -12,7 +12,7 @@
 #rawDataSubmit {
     position: absolute;
     left: 20px;
-    top: 455px;
+    top: 420px;
     width: 70px;
 }
 

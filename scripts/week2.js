@@ -12,6 +12,7 @@ function copyArray(myArray) {
             break;
         }
         if (myArray[i] != "Friend" && myArray[i] != "Friends") {
+            
             myCopiedArray.push(myArray[i]);
         }
     }
@@ -19,13 +20,38 @@ function copyArray(myArray) {
 }
 
 function postToTable(myArray) {
-    var rowIndex = 0;
+    var rowIndex = 1;
     var hasNumber = /\d/;
-    console.log("Hello there");
+    var textBox = document.getElementById("rawData");
+    var table = document.getElementById("friendTable");
+    var isMut = false;
+    textBox.value = "Name,Num,Mut\n";
     for (var i = 0; i < myArray.length; i++) {
-        //if (hasNumber.test(myArray[i])) console.log("I am positive" + myArray[i]);
-        //else (console.log("I am negative" + myArray[i+1]));
-        console.log(myArray[i])
+        if ((hasNumber.test(myArray[i]) == false) && (hasNumber.test(myArray[i+1]) == true)) {
+            isMut = false;
+            
+            var row = table.insertRow(rowIndex)
+            var name = row.insertCell(0);
+            var num = row.insertCell(1);
+            var mut = row.insertCell(2);
+            name.innerHTML = myArray[i];
+            myArray[i+1] = myArray[i+1].replace(" friends", "");
+            myArray[i+1] = myArray[i+1].replace(" friend", "");
+            if (myArray[i+1].includes("mutual")) {
+                myArray[i+1] = myArray[i+1].replace("mutual","")
+                mut.innerHTML = myArray[i+1];
+                isMut = true;
+            }
+            else {num.innerHTML = myArray[i+1]}
+
+            textBox.value += myArray[i] + ",";
+            if (isMut) {
+                textBox.value += "," + myArray[i+1] + "\n";
+            }
+            else {textBox.value += myArray[i+1] + ",,\n";}
+
+        rowIndex++;
+        }
     }
 }
 
