@@ -11,6 +11,7 @@
   <link href="css/portfolio-item.css" rel="stylesheet">
   <link href="css/week2.css" rel="stylesheet">
 
+
 </head>
 
 <body>
@@ -48,34 +49,27 @@
   <div class="container">
 
     <!-- Portfolio Item Heading -->
-    <h1 class="my-4">FB Friend Database
-      <small>Week 2 (05/24-05/30)</small>
+    <h1 class="my-4">Basic Calculator
+      <small>Week 5 (06/17-06/23)</small>
+      
     </h1>
 
     <!-- Portfolio Item Row -->
     <div class="row">
       <div class="col-md-8">
-        <p data-height="498" data-theme-id="dark" data-slug-hash="ZRLvMr" data-default-tab="result" data-user="msautter" data-embed-version="2" data-pen-title="Week 2" class="codepen">See the Pen <a href="https://codepen.io/msautter/pen/ZRLvMr/">Week 2</a> by Marek Sautter (<a href="https://codepen.io/msautter">@msautter</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <p data-height="400" data-theme-id="dark" data-slug-hash="PaxBVN" data-default-tab="html,result" data-user="msautter" data-embed-version="2" data-pen-title="Week 5" class="codepen">See the Pen <a href="https://codepen.io/msautter/pen/PaxBVN/">Week 5</a> by Marek Sautter (<a href="https://codepen.io/msautter">@msautter</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
       </div>
 
       <div class="col-md-4">
 
         <h3 class="my-3">Project Description</h3>
-        <p>Originally, I developed this project in python and SQLite but I wanted to recreate it in Javascript. I also tried to integrate the Facebook API to generate a list of friends, but Facebook disabled this feature a few years ago.
-        </p>
-
-        <h3 class="my-3">Steps</h3>
-        <ol>
-          <li>Go to your facebook friends list on your profile.</li>
-          <li>Scroll down until all your friends have been loaded on the screen.</li>
-          <li>Select all (ctrl+a) and paste (ctrl+v) into the text input to the left.</li>
-        </ol>
-        <a class="github-button" href="https://github.com/msautter/Wk2-Facebook.db" data-size="large" aria-label="Star msautter/Wk2-Facebook.db on GitHub">View</a><br>
-
-        <a class="github-button" href="https://github.com/msautter/Wk2-Facebook.db/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download msautter/Wk2-Facebook.db on GitHub">Download</a>
+        <p>Creating a basic calculator is like a rite of passage for a programmer when learning a new language. If you don't make a calculator in that language did you really learn it?</p><br>
+        <p>Originally this project had a lot more JavaScript, but I realized we can just update the calculator display within html. The updateCalc() function in JS isn't really even necessary but I thought it was best to create a function to limit repetitive code.</p>
+        <a class="github-button" href="https://github.com/msautter/Wk5-Basic-Calculator" data-size="large" aria-label="Star msautter/Wk5-Basic-Calculator on GitHub">View</a><br> 
+        <a class="github-button" href="https://github.com/msautter/Wk5-Basic-Calculator/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download msautter/Wk5-Basic-Calculator on GitHub">Download</a>
       </div>
-
+      
     </div>
     <!-- /.row -->
 
@@ -91,6 +85,12 @@
       </div>
 
       <div class="col-md-3 col-sm-6 mb-4">
+        <a href="week2.html">
+          <img class="img-fluid" src="content/Wk2x700x400.png" alt="Facebook.db Generator">
+        </a>
+      </div>
+
+      <div class="col-md-3 col-sm-6 mb-4">
         <a href="week3.html">
           <img class="img-fluid" src="content/Wk3x700x400.png" alt="p5.js Paint">
         </a>
@@ -99,12 +99,6 @@
       <div class="col-md-3 col-sm-6 mb-4">
         <a href="week4.html">
           <img class="img-fluid" src="content/Wk4x700x400.png" alt="p5.js Plot">
-        </a>
-      </div>
-
-      <div class="col-md-3 col-sm-6 mb-4">
-        <a href="week5.html">
-          <img class="img-fluid" src="content/Wk5x700x400.png" alt="Basic Calculator">
         </a>
       </div>
 
@@ -127,8 +121,11 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="scripts/week2.js"></script>
-  <!-- Place this tag in your head or just before your close body tag. -->
+  <script src="scripts/week3.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/addons/p5.dom.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/addons/p5.sound.min.js"></script>
+  <script type="text/javascript" src="sketch.js"></script>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 
