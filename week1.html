@@ -1,137 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Marek Sautter</title>
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/portfolio-item.css" rel="stylesheet">
-    <link href="css/personalAdditions.css" rel="stylesheet">
+  <title>Marek Sautter</title>
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/portfolio-item.css" rel="stylesheet">
+  <link href="css/personalAdditions.css" rel="stylesheet">
+  <link rel="icon" href="content/tempIcon.png">
+</head>
 
-  </head>
+<body>
 
-  <body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Marek Sautter</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Marek Sautter</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home
-                
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resume.html">Resume</a>
+            <li class="nav-item active dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Projects
               </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                <a class="dropdown-item" href="summer.html">Summer Programming</a>
+                <a class="dropdown-item" href="projects.html">Projects</a>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="resume.html">Resume</a>
-              <li class="nav-item active dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Projects
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                    <a class="dropdown-item" href="summer.html">Summer Programming</a>
-                    <a class="dropdown-item" href="projects.html">Projects</a>
-                </div>
-              </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
-          </ul>
-        </div>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!-- Page Content -->
-    <div class="container">
+  <!-- Page Content -->
+  <div class="container">
+    <br>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="summer.html">Summer Programming</a>
+      </li>
+      <li class="breadcrumb-item active">Week 1</li>
+    </ol>
+    <!-- Portfolio Item Heading -->
 
-      <!-- Portfolio Item Heading -->
-      
-      <h1 class="my-4">
-        <button onclick="location.href='summer.html'" class="summerBtn">Prev</button>
-        <button onclick="location.href='week2.html'" class="summerBtn">Next</button>
-        Week 1: Dice Roll
-      </h1>
+    <h1 class="my-4">
+      <button onclick="location.href='summer.html'" class="summerBtn">Prev</button>
+      <button onclick="location.href='week2.html'" class="summerBtn">Next</button>
+      Dice Roll
+    </h1>
 
-      <!-- Portfolio Item Row -->
-      <div class="row">
-        <div class="col-md-8">
-          <p data-height="500" data-theme-id="dark" data-slug-hash="WyRdap" data-default-tab="result" data-user="msautter" data-embed-version="2" data-pen-title="Week 1" class="codepen">See the Pen <a href="https://codepen.io/msautter/pen/WyRdap/">Week 1</a> by Marek Sautter (<a href="https://codepen.io/msautter">@msautter</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-        </div>
-
-        <div class="col-md-4">
-          <h3 class="my-3">Project Description</h3>
-          <p>For the first week of my summer programming challenge, I wanted to create a simple dice roller.
-            I could have just picked a random num from 1-6, but I wanted to practice my animations using Javascript.
-          </p>
-          <p>
-            Each time the user presses start, a random length is chosen and decremented when the selector moves.
-            I later added the ability to loop the selector because it spent too much time on the ends. Then added a 
-            random start button that also randomized where the selector begins.
-          </p>
-          <a class="github-button" href="https://github.com/msautter/Wk1-Dice-Roller/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-lab<el="Download msautter/Wk1-Dice-Roller on GitHub">Download</a><br><br>
-          <a class="github-button" href="https://github.com/msautter/Wk1-Dice-Roller" data-size="large" aria-label="Star msautter/Wk1-Dice-Roller on GitHub">View</a>
-        </div>
+    <!-- Portfolio Item Row -->
+    <div class="row">
+      <div class="col-md-8">
+        <p data-height="500" data-theme-id="dark" data-slug-hash="WyRdap" data-default-tab="result" data-user="msautter" data-embed-version="2"
+          data-pen-title="Week 1" class="codepen">See the Pen
+          <a href="https://codepen.io/msautter/pen/WyRdap/">Week 1</a> by Marek Sautter (
+          <a href="https://codepen.io/msautter">@msautter</a>) on
+          <a href="https://codepen.io">CodePen</a>.</p>
 
       </div>
-      <!-- /.row -->
 
-      <!-- Related Projects Row -->
-      <h3 class="my-4">Other Projects</h3>
-
-      <div class="row">
-
-        <div class="col-md-3 col-sm-6 mb-4">
-          <a href="week2.html">
-            <img class="img-fluid" src="content/Wk2x700x400.png" alt="Facebook.db Generator">
-          </a>
-        </div>
-
-        <div class="col-md-3 col-sm-6 mb-4">
-          <a href="week3.html">
-            <img class="img-fluid" src="content/Wk3x700x400.png" alt="p5.js Paint">
-          </a>
-        </div>
-
-        <div class="col-md-3 col-sm-6 mb-4">
-          <a href="week4.html">
-            <img class="img-fluid" src="content/Wk4x700x400.png" alt="p5.js Plot">
-          </a>
-        </div>
-
-        <div class="col-md-3 col-sm-6 mb-4">
-          <a href="week5.html">
-            <img class="img-fluid" src="content/Wk5x700x400.png" alt="Basic Calculator">
-          </a>
-        </div>
-
+      <div class="col-md-4">
+        <h3 class="my-3">Project Description</h3>
+        <p>For the first week of my summer programming challenge, I wanted to create a simple dice roller. I could have just
+          picked a random num from 1-6, but I wanted to practice my animations using Javascript.
+        </p>
+        <p>
+          Each time the user presses start, a random length is chosen and decremented when the selector moves. I later added the ability
+          to loop the selector because it spent too much time on the ends. Then added a random start button that also randomized
+          where the selector begins.
+        </p>
+        <a class="github-button" href="https://github.com/msautter/Wk1-Dice-Roller/archive/master.zip" data-icon="octicon-cloud-download"
+          data-size="large" aria-lab<el="Download msautter/Wk1-Dice-Roller on GitHub">Download</a>
+        <br>
+        <br>
+        <a class="github-button" href="https://github.com/msautter/Wk1-Dice-Roller" data-size="large" aria-label="Star msautter/Wk1-Dice-Roller on GitHub">View</a>
       </div>
-      <!-- /.row -->
 
     </div>
-    <!-- /.container -->
+    <!-- /.row -->
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-          <p class="m-0 text-center text-white">Copyright &copy; Marek Sautter 2018<br>The MIT License (MIT)<br>
-          </p>
+    <!-- Related Projects Row -->
+    <h3 class="my-4">Other Projects</h3>
+
+    <div class="row">
+
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="week2.html">
+          <img class="img-fluid" src="content/Wk2x700x400.png" alt="Facebook.db Generator">
+        </a>
       </div>
-      <!-- /.container -->
-    </footer>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-  </body>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="week3.html">
+          <img class="img-fluid" src="content/Wk3x700x400.png" alt="p5.js Paint">
+        </a>
+      </div>
+
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="week4.html">
+          <img class="img-fluid" src="content/Wk4x700x400.png" alt="p5.js Plot">
+        </a>
+      </div>
+
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="week5.html">
+          <img class="img-fluid" src="content/Wk5x700x400.png" alt="Basic Calculator">
+        </a>
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Marek Sautter 2018
+        <br>The MIT License (MIT)
+        <br>
+      </p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</body>
 
 </html>
