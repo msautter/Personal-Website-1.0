@@ -5,7 +5,15 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123269619-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
+    gtag('config', 'UA-123269619-1');
+  </script>
   <title>Marek Sautter</title>
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/portfolio-item.css" rel="stylesheet">
@@ -80,8 +88,8 @@
         <!-- Post Content -->
         <p class="lead">
           <p>This application is based on the American self-checkout system, often found in supermarkets and home improvement
-            stores. Most of these machines require the user to add their items using a barcode scanner.
-            Instead of scanning items, the user has an interactive menu with the entire store inventory; divided into the following categories:
+            stores. Most of these machines require the user to add their items using a barcode scanner. Instead of scanning
+            items, the user has an interactive menu with the entire store inventory; divided into the following categories:
           </p>
           <ol>
             <li>Produce</li>
@@ -91,18 +99,17 @@
             <li>Other</li>
           </ol>
           <p>The user has two options for adding items. The left panel displays the store's inventory in a tab control by category.
-           The right panel displays a search menu and is accessible by clicking the search icon  
-           <img src="content/P1/searchIcon.png" style="width: 20px; height: 20px;">.
-           Once the user has found their item, it can be double clicked and automatically added to the cart.</p>
+            The right panel displays a search menu and is accessible by clicking the search icon
+            <img src="content/P1/searchIcon.png" style="width: 20px; height: 20px;">. Once the user has found their item, it can be double clicked and automatically added to the cart.</p>
           <hr>
           <img class="img-fluid rounded" src="content/P1/p1-inv.png" alt="p1-cart">
           <br>
           <br>
           <small>Customer inventory tab control (left) and search menu (right)</small>
           <hr>
-          <p>This is a basic view of the inventory, only showing the item name and price. 
-            Customers usually do not have access to view more than these simple characteristics. 
-            In reality, each item in the inventory contains the following attributes: 
+          <p>This is a basic view of the inventory, only showing the item name and price. Customers usually do not have access
+            to view more than these simple characteristics. In reality, each item in the inventory contains the following
+            attributes:
           </p>
           <ol>
             <li>Product Name</li>
@@ -111,9 +118,10 @@
             <li>Quantity</li>
             <li>Price</li>
           </ol>
-          <p>In order to view the rest of these item attributes, you must either be a floor manager, or a warehouse worker. The
-            floor manager is given a unique username and password and has the ability to launch the login menu using the command 'CTRL
-            + I'. After the employee logs in, they have a separate menu displayed, detailing items in the store's inventory.</p>
+          <p>In order to view the rest of these item attributes, you must either be a floor manager, or a warehouse worker.
+            The floor manager is given a unique username and password and has the ability to launch the login menu using
+            the command 'CTRL + I'. After the employee logs in, they have a separate menu displayed, detailing items in the
+            store's inventory.</p>
           <hr>
           <img class="img-fluid rounded" src="content/P1/p1-manage-inventory.png" alt="p1-cart">
           <br>
@@ -137,7 +145,9 @@
           a date and time of the last edit to the inventory.
         </p>
         <hr>
-        <img class="img-fluid rounded" src="content/P1/p1-comma.png" alt="p1-error"><br><br>
+        <img class="img-fluid rounded" src="content/P1/p1-comma.png" alt="p1-error">
+        <br>
+        <br>
         <small>List of inventory files created (left) and the 'Inventory.txt' (right).</small>
         <hr>
         <p> The backend of the program is accessible through the file manager and the console. At any time, the warehouse worker
@@ -146,14 +156,18 @@
           there is a surplus of 100 or more of an item.
         </p>
         <hr>
-        <img class="img-fluid rounded" src="content/P1/p1-backend-inv.png" alt="p1-error"><br><br>
+        <img class="img-fluid rounded" src="content/P1/p1-backend-inv.png" alt="p1-error">
+        <br>
+        <br>
         <small>The console output of the program listing the inventory.</small>
         <hr>
-        <p>The program also generates a virtual copy of the receipt detailing all items that were purchased along with
-          the time and date of the transaction.
+        <p>The program also generates a virtual copy of the receipt detailing all items that were purchased along with the time
+          and date of the transaction.
         </p>
         <hr>
-        <img class="img-fluid rounded" src="content/P1/P1-cart.png" alt="p1-error"><br><br>
+        <img class="img-fluid rounded" src="content/P1/P1-cart.png" alt="p1-error">
+        <br>
+        <br>
         <small>Customer cart (left) and virtual cart in the backend (right).</small>
         <hr>
       </div>
