@@ -20,7 +20,8 @@
   <link rel="icon" href="content/tempIcon.png">
 </head>
 
-<body>
+<body onLoad="loadPage(11)">
+
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -33,23 +34,23 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home
+
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="resume.html">Resume</a>
-          </li>
-          <li class="nav-item active dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Projects
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-              <a class="dropdown-item" href="summer.html">Summer Programming</a>
-              <a class="dropdown-item" href="projects.html">Projects</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
+            <li class="nav-item active dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Projects
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                <a class="dropdown-item" href="summer.html">Summer Programming</a>
+                <a class="dropdown-item" href="projects.html">Projects</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
         </ul>
       </div>
     </div>
@@ -62,39 +63,33 @@
       <li class="breadcrumb-item">
         <a href="summer.html">Summer Programming</a>
       </li>
-      <li class="breadcrumb-item active">Week 11</li>
+      <li class="breadcrumb-item active"></li>
     </ol>
     <!-- Portfolio Item Heading -->
+
     <h1 class="my-4">
-      <button onclick="location.href='week10.html'" class="summerBtn">Prev</button>
-      <button onclick="location.href='summer.html'" class="summerBtn">Next</button>
-      Hangman
+      <a class="summerBtn">Prev</a>
+      <a class="summerBtn">Next</a>
+      <a id="pageTitle"></a>
     </h1>
 
     <!-- Portfolio Item Row -->
     <div class="row">
       <div class="col-md-8">
-        <p data-height="500" data-theme-id="dark" data-slug-hash="PByPdB" data-default-tab="result" data-user="msautter" data-pen-title="Week 11"
-          class="codepen">See the Pen
-          <a href="https://codepen.io/msautter/pen/PByPdB/">Week 11</a> by Marek Sautter (
-          <a href="https://codepen.io/msautter">@msautter</a>) on
-          <a href="https://codepen.io">CodePen</a>.</p>
-        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+        <!--CODEPEN-->
+        <p id = "codepen" data-height="700" data-theme-id="dark" data-default-tab="result" data-user="msautter" data-embed-version="2" class="codepen">
       </div>
 
       <div class="col-md-4">
-
+        <!--DESCRIPTION-->
         <h3 class="my-3">Project Description</h3>
-        <p>Last week's gravity simulator got me thinking about making games on my website. 
-          I couldn't think of any physics based games I wanted to create so I went for a classic and made my own version of hangman.
-        This was probably the most code I've written for one of these small projects but I know I could write a lot more if I had time.</p>
-        <p>Maybe when I come back to this code I can use matter.js to make the body sway back and forth. 
-          That might be a little too creepy though. </p>
-        <a class="github-button" href="https://github.com/msautter/Wk11-Hangman/archive/master.zip" data-icon="octicon-cloud-download"
-          data-size="large" aria-label="Download msautter/Wk10-Gravity-Simulator on GitHub">Download</a>
-        <br>
-        <a class="github-button" href="https://github.com/msautter/Wk11-Hangman" data-size="large" aria-label="Star msautter/Wk11-Hangman on Github">View</a>
+        <div id='description'>
+        </div>
+        <!--GITHUB-->
+        <a id="github1" class="github-button" data-icon="octicon-cloud-download" data-size="large">Download</a> <br> <br>
+        <a id="github2" class="github-button" data-size="large">View</a>
       </div>
+
     </div>
     <!-- /.row -->
 
@@ -102,28 +97,28 @@
     <h3 class="my-4">Other Projects</h3>
 
     <div class="row">
-
+      <!--PREVIEWS-->
       <div class="col-md-3 col-sm-6 mb-4">
-        <a href="week1.html">
-          <img class="img-fluid" src="content/Wk1x700x400.png" alt="Dice Roller">
+        <a href="#" class='prevA'>
+          <img class="img-fluid" src="content/ComingSoon.png" alt="Coming Soon">
         </a>
       </div>
 
       <div class="col-md-3 col-sm-6 mb-4">
-        <a href="week2.html">
-          <img class="img-fluid" src="content/Wk2x700x400.png" alt="Facebook.db Generator">
+        <a href="#" class='prevA'>
+          <img class="img-fluid" src="content/ComingSoon.png" alt="Coming Soon">
         </a>
       </div>
 
       <div class="col-md-3 col-sm-6 mb-4">
-        <a href="week3.html">
-          <img class="img-fluid" src="content/Wk3x700x400.png" alt="p5.js Paint">
+        <a href="#" class='prevA'>
+          <img class="img-fluid" src="content/ComingSoon.png" alt="Coming Soon">
         </a>
       </div>
 
       <div class="col-md-3 col-sm-6 mb-4">
-        <a href="week4.html">
-          <img class="img-fluid" src="content/Wk4x700x400.png" alt="p5.js Plot">
+        <a href="#" class='prevA'>
+          <img class="img-fluid" src="content/ComingSoon.png" alt="Coming Soon">
         </a>
       </div>
 
@@ -145,6 +140,8 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
+  <script src="objs/summer.json"></script>
+  <script src="scripts/randFile.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script async defer src="https://buttons.github.io/buttons.js"></script>

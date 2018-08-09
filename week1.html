@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -21,7 +20,7 @@
   <link rel="icon" href="content/tempIcon.png">
 </head>
 
-<body onLoad="genRand()">
+<body onLoad="loadPage(1)">
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -64,42 +63,31 @@
       <li class="breadcrumb-item">
         <a href="summer.html">Summer Programming</a>
       </li>
-      <li class="breadcrumb-item active">Week 1</li>
+      <li class="breadcrumb-item active"></li>
     </ol>
     <!-- Portfolio Item Heading -->
 
     <h1 class="my-4">
-      <button onclick="location.href='summer.html'" class="summerBtn">Prev</button>
-      <button onclick="location.href='week2.html'" class="summerBtn">Next</button>
-      Dice Roll
+      <a class="summerBtn">Prev</a>
+      <a class="summerBtn">Next</a>
+      <a id="pageTitle"></a>
     </h1>
 
     <!-- Portfolio Item Row -->
     <div class="row">
       <div class="col-md-8">
-        <p data-height="500" data-theme-id="dark" data-slug-hash="WyRdap" data-default-tab="result" data-user="msautter" data-embed-version="2"
-          data-pen-title="Week 1" class="codepen">See the Pen
-          <a href="https://codepen.io/msautter/pen/WyRdap/">Week 1</a> by Marek Sautter (
-          <a href="https://codepen.io/msautter">@msautter</a>) on
-          <a href="https://codepen.io">CodePen</a>.</p>
-
+        <!--CODEPEN-->
+        <p id = "codepen" data-height="700" data-theme-id="dark" data-default-tab="result" data-user="msautter" data-embed-version="2" class="codepen">
       </div>
 
       <div class="col-md-4">
+        <!--DESCRIPTION-->
         <h3 class="my-3">Project Description</h3>
-        <p>For the first week of my summer programming challenge, I wanted to create a simple dice roller. I could have just
-          picked a random num from 1-6, but I wanted to practice my animations using Javascript.
-        </p>
-        <p>
-          Each time the user presses start, a random length is chosen and decremented when the selector moves. I later added the ability
-          to loop the selector because it spent too much time on the ends. Then added a random start button that also randomized
-          where the selector begins.
-        </p>
-        <a class="github-button" href="https://github.com/msautter/Wk1-Dice-Roller/archive/master.zip" data-icon="octicon-cloud-download"
-          data-size="large" aria-lab<el="Download msautter/Wk1-Dice-Roller on GitHub">Download</a>
-        <br>
-        <br>
-        <a class="github-button" href="https://github.com/msautter/Wk1-Dice-Roller" data-size="large" aria-label="Star msautter/Wk1-Dice-Roller on GitHub">View</a>
+        <div id='description'>
+        </div>
+        <!--GITHUB-->
+        <a id="github1" class="github-button" data-icon="octicon-cloud-download" data-size="large">Download</a> <br> <br>
+        <a id="github2" class="github-button" data-size="large">View</a>
       </div>
 
     </div>
@@ -109,28 +97,28 @@
     <h3 class="my-4">Other Projects</h3>
 
     <div class="row">
-
-      <div class="col-md-3 col-sm-6 mb-4" >
-        <a href="week2.html" id='prev1'>
-          <img class="img-fluid" src="content/Wk2x700x400.png" alt="Facebook.db Generator">
-        </a>
-      </div>
-
-      <div class="col-md-3 col-sm-6 mb-4" >
-        <a href="week3.html" id='prev2'>
-          <img class="img-fluid" src="content/Wk3x700x400.png" alt="p5.js Paint">
-        </a>
-      </div>
-
-      <div class="col-md-3 col-sm-6 mb-4" >
-        <a href="week4.html" id='prev3'>
-          <img class="img-fluid" src="content/Wk4x700x400.png" alt="p5.js Plot">
+      <!--PREVIEWS-->
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="#" class='prevA'>
+          <img class="img-fluid" src="content/ComingSoon.png" alt="Coming Soon">
         </a>
       </div>
 
       <div class="col-md-3 col-sm-6 mb-4">
-        <a href="week5.html" id='prev4'>
-          <img class="img-fluid" src="content/Wk5x700x400.png" alt="Basic Calculator">
+        <a href="#" class='prevA'>
+          <img class="img-fluid" src="content/ComingSoon.png" alt="Coming Soon">
+        </a>
+      </div>
+
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="#" class='prevA'>
+          <img class="img-fluid" src="content/ComingSoon.png" alt="Coming Soon">
+        </a>
+      </div>
+
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="#" class='prevA'>
+          <img class="img-fluid" src="content/ComingSoon.png" alt="Coming Soon">
         </a>
       </div>
 
@@ -152,6 +140,7 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
+  <script src="objs/summer.json"></script>
   <script src="scripts/randFile.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
