@@ -15,7 +15,7 @@
                 "week": "05/20-05/26",
                 "gitHubRep": "Wk1-Dice-Roller",
                 "codePenTag": "WyRdap",
-                "desc": "Roll the dice and see where it lands! It doesn\"t get any easier than that.",
+                "desc": "Roll the dice and see where it lands! It doesn\\'t get any easier than that.",
                 "paras": [ 
                     "For the first week of my summer programming challenge, I wanted to create a simple dice roller. I could have just picked a random num from 1-6, but I wanted to practice my animations using Javascript.",
                     "Each time the user presses start, a random length is chosen and decremented when the selector moves. I later added the ability to loop the selector because it spent too much time on the ends. Then added a random start button that also randomized where the selector begins."
@@ -60,7 +60,7 @@
                 "desc": "Use p5.js to graph out the rollercoaster of emotions that is my life.",
                 "paras": [ 
                     "I really enjoy using the p5.js library so this week I created a plotting program. This is a really simple application and has a lot of room for improvement.",
-                    "Hopefully, I can come back to this and allow the user to click on a point instead of typing coordinates. Also if the points aren\"t showing, make sure to click on the graph after typing."
+                    "Hopefully, I can come back to this and allow the user to click on a point instead of typing coordinates. Also if the points aren\\'t showing, make sure to click on the graph after typing."
                 ]
             },
             {
@@ -71,10 +71,10 @@
                 "week": "06/17-06/23",
                 "gitHubRep": "Wk5-Basic-Calculator",
                 "codePenTag": "PaxBVN",
-                "desc": "Creating a calculator in a new language is like a rite of passage. If you don\"t make a calculator in that language did you really learn it?",
+                "desc": "Creating a calculator in a new language is like a rite of passage. If you don\\'t make a calculator in that language did you really learn it?",
                 "paras": [ 
-                    "Creating a basic calculator is like a rite of passage for a programmer when learning a new language. If you don\"t make a calculator in that language did you really learn it?",
-                    "Originally this project had a lot more JavaScript, but I realized we can just update the calculator display within html. The updateCalc() function in JS isn\"t really even necessary but I thought it was best to create a function to limit repetitive code."
+                    "Creating a basic calculator is like a rite of passage for a programmer when learning a new language. If you don\\'t make a calculator in that language did you really learn it?",
+                    "Originally this project had a lot more JavaScript, but I realized we can just update the calculator display within html. The updateCalc() function in JS isn\\'t really even necessary but I thought it was best to create a function to limit repetitive code."
                 ]
             },
             {
@@ -102,7 +102,7 @@
                 "desc": "Complete one of the most difficult tasks of the 21st century: unlocking a phone. Luckily the pin is right there.",
                 "paras": [ 
                     "I wanted to make an application that emulated an android phone and could load mobile versions of websites within it. I still need to do more research on implementing some of the functionality of a smart phone, but the lock screen is a good start. ",
-                    "Maybe next summer I\"ll come back to this project and add a web browser so you can check your email from a phone rendered on some random kid\"s website."
+                    "Maybe next summer I\\'ll come back to this project and add a web browser so you can check your email from a phone rendered on some random kid\\'s website."
                 ]
             },
             {
@@ -113,9 +113,9 @@
                 "week": "07/08-07/14",
                 "gitHubRep": "Wk8-Sticky-Notes",
                 "codePenTag": "pZJLKb",
-                "desc": "Jot down your high school crush on your very own Sticky Note(TM) and I promise I won\"t tell.",
+                "desc": "Jot down your high school crush on your very own Sticky Note(TM) and I promise I won\\'t tell.",
                 "paras": [ 
-                    "I really liked how the sticky note turned out from last week\"s project so I recreated it here with some additional functionality. This time the content within the note is editable and you can move the note by dragging the pushpin.",
+                    "I really liked how the sticky note turned out from last week\\'s project so I recreated it here with some additional functionality. This time the content within the note is editable and you can move the note by dragging the pushpin.",
                     "When I return to this project, I want the user to be able to create more than one sticky notes and maybe change the color of the paper and pushpin."
                 ]
             },
@@ -127,10 +127,10 @@
                 "week": "07/15-07/21",
                 "gitHubRep": "Wk9-Pos-Gen",
                 "codePenTag": "EpgyQB",
-                "desc": "Use rita.js to list the parts of speech, ya know, in case you forgot 'dog' is a noun. I don\"t judge.",
+                "desc": "Use rita.js to list the parts of speech, ya know, in case you forgot 'dog' is a noun. I don\\'t judge.",
                 "paras": [ 
                     "For this week, I planned on using matter.js for a gravity simulator but I wanted to take a break from visual JavaScript libraries. I later found Rita.js, 'a library that provides tools for artists and writers working with natural language in programmable media.'",
-                    "This is just a basic implementation of Rita\"s pos( ) function that generates a PENN part-of-speech tag for most words in the English language. If you want to know more about what each tag means you can find them here."
+                    "This is just a basic implementation of Rita\\'s pos( ) function that generates a PENN part-of-speech tag for most words in the English language. If you want to know more about what each tag means you can find them here."
                 ]
             },
             {
@@ -141,7 +141,7 @@
                 "week": "07/22-07/28",
                 "gitHubRep": "Wk10-Gravity-Simulator",
                 "codePenTag": "QBgLxJ",
-                "desc": "Use matter.js to see what would happen if you used an hourglass on different planets. Don\"t ask me how I got one on Jupiter.",
+                "desc": "Use matter.js to see what would happen if you used an hourglass on different planets. Don\\'t ask me how I got one on Jupiter.",
                 "paras": [ 
                     "This project took me a little longer than the others, but looking back, I can say it was worth it. For this week I used a combination of matter.js and p5.js. I could have used matter.js for the rendering but need more practice with p5.js so I combined them.",
                     "With these two libraries, the possibilities are endless. I can make more complex simulations, animations, and even physics games!"
@@ -157,7 +157,7 @@
                 "codePenTag": "PByPdB",
                 "desc": "Can you beat a computer at hangman? Use rita.js to generate a word and see if you can guess it in time.",
                 "paras": [ 
-                    "Last week\"s gravity simulator got me thinking about making games on my website. I couldn\"t think of any physics based games I wanted to create so I went for a classic and made my own version of hangman. This was probably the most code I\"ve written for one of these small projects but I know I could write a lot more if I had time.",
+                    "Last week\\'s gravity simulator got me thinking about making games on my website. I couldn\\'t think of any physics based games I wanted to create so I went for a classic and made my own version of hangman. This was probably the most code I\\'ve written for one of these small projects but I know I could write a lot more if I had time.",
                     "Maybe when I come back to this code I can use matter.js to make the body sway back and forth. That might be a little too creepy though."
                 ]
             }
