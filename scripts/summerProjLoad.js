@@ -174,6 +174,20 @@ let projects = {
                 'Maybe when I come back to this code I can use matter.js to make the body sway back and forth. That might be a little too creepy though.'
             ]
         },
+        {
+            site: 'week12.html',
+            img: 'Wk12x700x400.png',
+            title: 'Morse Code Machine',
+            weekNum: 12,
+            week: '08/05-08/11',
+            gitHubRep: 'Wk12-Morse',
+            codePenTag: 'qygyQe',
+            desc: 'Practice your morse code skills with this morse code translator. See if you can write your name!',
+            paras: [
+                'I wanted to end this 12 week program with a true programming challenge. Create a program using none of the libraries I learned this summer! I chose to program morse code because I wanted to learn it and after this week\'s challenge, I can now say the following: ',
+                '.-- . / .- .-. . / .-.. .. ...- .. -. --. / .. -. / .- / ... .. -- ..- .-.. .- - .. --- -. .-.-.- / .-- .... --- . ...- . .-. / -... .-. . .- -.- ... / - .... . / ... .. -- ..- .-.. .- - .. --- -. / -.-. .- -. / . ... -.-. .- .--. . .-.-.-'
+            ]
+        }
     ]
 }
 //This function is for loading previews of the home, contact, and resume page
