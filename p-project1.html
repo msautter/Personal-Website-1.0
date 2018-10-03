@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123269619-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-123269619-1');
+  </script>
+  <title>Marek Sautter</title>
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/portfolio-item.css" rel="stylesheet">
+  <link rel="icon" href="content/tempIcon.png">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Marek Sautter</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resume.html">Resume</a>
+          </li>
+          <li class="nav-item active dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Projects
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item" href="summer.html">Summer Programming</a>
+              <a class="dropdown-item" href="projects.html">Projects</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Project Two
+    </h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="projects.html">Projects</a>
+      </li>
+      <li class="breadcrumb-item active">Spotify User Stats</li>
+    </ol>
+
+    <div class="row">
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+
+        <!-- Preview Image -->
+        <img class="img-fluid rounded" src="content/P2x700x400.png" alt="Spotify User Stats">
+
+        <hr>
+
+        <!-- Date/Time -->
+        <p>Updated on September 26th, 2018</p>
+
+        <hr>
+
+        <!-- Post Content -->
+        <p class="lead">
+          <p>
+            I've already created an API this semester in my web back-end class, but I wanted to develop an application that
+            utilized an external API. I chose the Spotify API because they have some of the best documentation I've seen
+            for authentication and I have been using their services for 5+ years.
+          </p>
+          <br>
+          <h2>Back End - Express App</h2>
+          <p>
+            The back-end portion of this project was built using MPJ's <a href="https://github.com/mpj/oauth-bridge-template">OAuth Bridge Template</a>. 
+            This is just a short express app that allows users to login to Spotify and then redirect them to my front-end application with a valid access token. This is where the term 'bridge' comes into play. The backend is bridging my web app to Spotify so that I don't need to keep logging in everytime I make an API call.
+          </p>
+          <p>In order to get the back-end working, we need to do the following: </p>
+          <ol>
+            <li>Create our Spotify App on <a href="https://developer.spotify.com/dashboard/applications">Spotify's Developer Dashboard</a></li>
+            <li>Add http://localhost:8888/callback to our redirect URLs</li>
+            <li>Create environmental variables of our <a href="https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/">Client ID</a> and <a href="https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/">Client Secret</a> from our Spotify App</li>
+            <li>Add 'user-read-top' to scope in <a href="https://github.com/mpj/oauth-bridge-template/blob/master/server.js">server.js</a> (line 16)</li>
+          </ol>
+          <p>Once you have made your changes to the back-end, run it using npm start and go to <a href="http://localhost:8888/login">http://localhost:8888/login</a>.</p>
+          <hr>
+          <img class="img-fluid rounded" src="content/P2/diagram.jpg" alt="bridge template">
+          <br>
+          <br>
+          <small>Simple use case diagram for Spotify User Stats</small>
+          <hr>
+          <br>
+          <br>
+
+          <h2>Front End - React Web App</h2>
+          <p>The front end for this application is a React App. <a href="https://reactjs.org/">React</a> is a declarative, efficient, and flexible 
+            JavaScript library created by Facebook for building user interfaces. </p>
+          <p>After the user is authenticated through the oauth-bridge, we are free to make API calls with our access token. Let's start with the user info: <br>
+            <code>
+              fetch('https://api.spotify.com/v1/me', { <br>
+              &emsp; headers: { <br>
+              &emsp; &emsp;  'Authorization': 'Bearer ' + accessToken <br> 
+              &emsp; &ensp; } <br>
+            })
+          </code>
+          </p>
+          <p>Once the fetch has been made and the data has been returned we then need to convert it to JSON and extract what we need.</p>
+          <code>
+            .then(response => response.json()) <br>
+            &emsp;.then(data => this.setState({ <br>
+            &emsp; &emsp; user: { <br>
+            &emsp; &emsp; &emsp; name: data.display_name, <br>
+            &emsp; &emsp; &emsp; userURL: data.external_urls.spotify, <br>
+            &emsp; &emsp; &emsp; numFollowers: data.followers.total, <br>
+            &emsp; &emsp; &emsp; imgURL: data.images[0].url, <br>
+            &emsp; &emsp; &emsp; plan: data.product <br>
+            &emsp; &emsp;    } <br>
+            &emsp;  }) <br>
+          </code> <br>
+          <p> <b>Note</b>: We need to use the 'then' keyword because JavaScript is asynchronous. If we called both functions at the same time we would
+            run into issues where we are trying to manipulate data that has not yet been created.
+          </p>
+          <p>
+            The first API call (/me) returns the following JSON:
+          </p>
+          <br>
+          <hr>
+          <img class="img-fluid rounded" src="content/P2/userJSON.jpg" alt="Spotify User Stats">
+          <br>
+          <br>
+          <small>User JSON data returned (left) and JSX div with JavaScript variables (right) </small>
+          <hr>
+          <br>
+          <p>
+            Now that our user's data has been loaded and displayed, we can start loading top tracks and artists. 
+            Both of these API calls are almost identical so I'll just cover the top tracks:
+            <code> 
+              fetch('https://api.spotify.com/v1/me/top/tracks?limit=50', { <br>
+              &emsp; headers: { <br> 
+              &emsp; &emsp;   'Authorization': 'Bearer ' + accessToken <br>
+              &emsp; } <br>
+            }) <br>
+            </code> 
+            Once this fecth has completed we can then start assigning values and pushing to an array.
+            <code> 
+              .then(response => response.json()).then(data => { <br>
+              &emsp; for (let i = 0; i &lt; data.items.length; i++) { <br>
+              &emsp; &emsp;    let track = { <br>
+              &emsp; &emsp; &emsp;  "name": data.items[i].name, <br>
+              &emsp; &emsp; &emsp;  "album": data.items[i].album.name, <br>
+              &emsp; &emsp; &emsp;  "artist": data.items[i].artists[0].name, <br>
+              &emsp; &emsp; &emsp;  "id": data.items[i].id, <br> 
+              &emsp; &emsp; &emsp;  "img" : data.items[i].album.images[0].url <br>
+              &emsp; &emsp; } <br> 
+              &emsp; &emsp; tracksToRender.push(track) <br>
+              &emsp;  } <br>
+              &emsp;  return tracksToRender <br>
+            } <br>
+            </code>
+            <br>
+          </p>
+          <hr>
+          <img class="img-fluid rounded" src="content/P2/tracksJSON.jpg" alt="Spotify Tracks">
+          <br>
+          <br>
+          <small>User Track JSON data returned (left) and JSX div with JavaScript variables (right)</small>
+          <hr>
+
+      </div>
+
+      <!-- Sidebar Widgets Column -->
+      <div class="col-md-4">
+
+        <!-- Search Widget -->
+        <!-- Categories Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Languages and Frameworks</h5>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>
+                  </li>
+                  <li>
+                    <a href="https://developer.spotify.com/documentation/web-api/">Spotify Web API</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="https://reactjs.org/">React</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Downloads and Documentation</h5>
+          <div class="card-body">
+            <a class="github-button" href="https://github.com/msautter/Spotify-UserStats/archive/master.zip" data-icon="octicon-cloud-download"
+              data-size="large" aria-label="Download msautter/Spotify-UserStats on GitHub">Download</a>
+            <br>
+            <br>
+            <a class="github-button" href="https://github.com/msautter/Spotify-UserStats" data-size="large" aria-label="Star msautter/Spotify-UserStats on GitHub">View</a>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <br>
+  <!-- /.container -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Marek Sautter 2018
+        <br>The MIT License (MIT)
+        <br>
+      </p>
+    </div>
+    <!-- /.container -->
+  </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+
+</html>
